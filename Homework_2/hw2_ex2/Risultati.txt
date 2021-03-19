@@ -1,0 +1,39 @@
+---Version a:
+Size of basic model: 152.11328125 kB
+Size of optimized model: 43.796875 kB
+Compressed: 22.1357421875 kB
+Accuracy: 0.91125
+Time: 0.6481838226318359 ms
+
+kws_inference.py --model Group2_kws_a.tflite --coeff 8 --mfcc
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.41ms
+Total Latency 58.95ms
+
+
+---Version b:
+Size of basic model: 152.11328125 kB
+Size of optimized model: 43.796875 kB
+Compressed: 22.1357421875 kB
+Accuracy: 0.91125
+Time: 0.8900573253631592 ms
+
+kws_inference.py --model Group2_kws_b.tflite --coeff 8 --mfcc
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 1.38ms
+Total Latency 57.27ms
+
+
+---Version c:
+Size of basic model: 152.11328125 kB
+Size of optimized model: 43.796875 kB
+Compressed: 35.12890625 kB
+Accuracy: 0.9125
+Time: 0.8582131862640381 ms
+
+kws_inference.py --model Group2_kws_c.tflite --length 320 --stride 160 --mfcc --rate 8000
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Inference Latency 2.23ms
+Total Latency 38.94ms
+
+
